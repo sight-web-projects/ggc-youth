@@ -5,20 +5,24 @@ import './App.css';
 import Home  from './components/Home'
 import About from  './components/About';
 import  Navigation from './components/Navigation';
-import Contact from './components/Contact';
+import Contact from './components/Contact'; 
+import Departments from './components/Departments';
 
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="container">
+      <div>
         <Navigation />
-        <Switch>
+        <div className="container">
+        <Switch >        
           <Route  path="/" component={Home} exact />
           <Route  path="/about" component={About} />
           <Route  path="/contact" component={Contact}/>
+          <Route  path="/departments" component={Departments}/>
           <Route  component={Error} />
         </Switch>
+        </div>
       </div>
     </BrowserRouter>
   );
